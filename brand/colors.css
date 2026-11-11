@@ -1,0 +1,51 @@
+/* Hydralink brand colours
+ *
+ * Two brand colours - Hydra Green and Amber - plus the tints, shades and
+ * neutrals a website needs. Contrast ratios (WCAG) are noted where they matter.
+ *
+ * Rule of thumb: green carries text and surfaces, amber is the spark.
+ * Amber is a FILL colour: never use it for text or thin lines on a light
+ * background (1.8:1 on paper). On dark green it works for anything (6.1:1).
+ */
+:root {
+  /* Brand */
+  --hl-green: #0F3D2E;        /* Hydra Green - primary. On paper 11.0:1, on white 12.2:1 */
+  --hl-amber: #F2A93B;        /* Amber - accent. On Hydra Green 6.1:1 */
+
+  /* Green scale */
+  --hl-green-900: #0A2A20;    /* deepest: footer, dark-mode page background */
+  --hl-green-700: #0F3D2E;    /* = --hl-green */
+  --hl-green-500: #1F6B50;    /* links, hover states on light. On paper 5.8:1 */
+  --hl-green-100: #DCE8E1;    /* soft green surface: cards, tags, section bands */
+
+  /* Amber scale */
+  --hl-amber-600: #C97F14;    /* pressed/hover state of amber buttons, large icons on light */
+  --hl-amber-500: #F2A93B;    /* = --hl-amber */
+  --hl-amber-100: #FBE8C4;    /* highlight background, badges */
+
+  /* Neutrals */
+  --hl-paper: #F6F3EA;        /* warm off-white page background */
+  --hl-white: #FFFFFF;        /* cards on paper */
+  --hl-ink: #14211C;          /* body text on light. On paper 15.0:1 */
+
+  /* Semantic defaults (light theme) */
+  --hl-bg: var(--hl-paper);
+  --hl-surface: var(--hl-white);
+  --hl-text: var(--hl-ink);
+  --hl-heading: var(--hl-green);
+  --hl-link: var(--hl-green-500);
+  --hl-cta-bg: var(--hl-amber);
+  --hl-cta-text: var(--hl-green);
+  --hl-cta-bg-hover: var(--hl-amber-600);
+}
+
+/* Dark sections / dark theme: add class="hl-dark" to a section or to <html> */
+.hl-dark {
+  --hl-bg: var(--hl-green);
+  --hl-surface: var(--hl-green-900);
+  --hl-text: var(--hl-paper);
+  --hl-heading: var(--hl-paper);
+  --hl-link: var(--hl-amber);
+  --hl-cta-bg: var(--hl-amber);
+  --hl-cta-text: var(--hl-green-900);
+}
