@@ -368,7 +368,7 @@ DEFAULTS = dict(jx=25, jy=40, left=NECK_L, right=NECK_R, neck_tip=0.74, trunk=1.
                 tail_fin=38, tail_fin_start=170, tail_fin_stop=90,
                 belly=0.60, belly_rim=5, plate_w=4.5, plate_gap=0.34,
                 scale_rows=(0.66, 0.26, -0.12), scale_r=0.22, scale_w=0.055, edge_keep=7, overlap_gap=7,
-                two_tone=True, lsb=70, rsb=58)
+                two_tone=True, lsb=-100, rsb=-90)   # negative bearings: the heads overhang, so the y is spaced by its necks
 
 
 def geom_path(g, fx, fy):

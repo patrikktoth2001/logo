@@ -1,6 +1,6 @@
 # Hydralink – átadó dokumentum
 
-Utolsó frissítés: a `claude/gallant-wright-ajybgh` ág utolsó commitja.
+Utolsó frissítés: a `claude/sharp-faraday-ejisma` ág utolsó commitja.
 Ez a fájl annak szól, aki új sessionben folytatja a Hydralink logó munkáját.
 
 ## Mi a feladat
@@ -24,6 +24,8 @@ de kidolgozott. Nem túl animált, nem rajzfilmes, nem túlzott.
   nagyobb méretben jönnek a pikkelyek, fogak, arcvonalak.
 - **Betűtípus**: Sora SemiBold (SIL OFL). Két alternatíva (Outfit, Space Grotesk,
   Geist) volt, de Sora maradt.
+- **Betűköz az y körül**: zárt. A `DEFAULTS` `lsb=-100`, `rsb=-90` (negatív: a nyelv és a
+  fejek túllógnak, a betűköz a nyakakhoz igazodik). `-130/-140`-nél a nyelv már hozzáér a H-hoz.
 - Koncepciók **Draco** és **Nexus** (geometrikus) elvetve, archívumban.
 
 ## Aktuális állapot
@@ -36,13 +38,15 @@ de kidolgozott. Nem túl animált, nem rajzfilmes, nem túlzott.
 | `hydralink-logo-on-dark.svg` | sötét háttérre |
 | `hydralink-logo-mono.svg` / `-mono-on-dark.svg` | egyszínű változat (zöld fejek, borostyán has, szem, nyelv) |
 | `hydralink-icon.svg` | ikon / favicon (csak az y, zöld kerekített négyzeten) |
-| `preview.png` | előnézeti tábla (logó, sötét, közelkép, mono, ikon, paletta) |
+
 
 Az SVG-k körvonalazott betűket használnak, nincs szükség font-telepítésre.
 
 ### Egyéb
 
 - `brand/colors.css`: a paletta CSS-változókként, sötét szekcióval (`.hl-dark`).
+- `preview.png` (a repó gyökerében): előnézeti tábla. Újraépítés: `python3 tools/make_preview.py out.html`,
+  majd képernyőkép 2000 px szélesen, 1,5x-ös léptékkel (Playwright, teljes oldal).
 - `README.md`: felhasználói leírás, a részletekről és a fájlokról.
 
 ### Archívum
@@ -97,6 +101,6 @@ Fontok: `tools/fonts/` (Sora, Outfit, Space Grotesk, Geist; mindegyikhez LICENSE
 
 ## Git
 
-- Ág: `claude/gallant-wright-ajybgh`
+- Ág: `claude/sharp-faraday-ejisma`
 - Nincs PR; a felhasználó nem kérte.
 - Commit csak kérésre, a szokásos attribúciós sorokkal.
